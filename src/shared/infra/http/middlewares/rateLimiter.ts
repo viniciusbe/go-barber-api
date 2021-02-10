@@ -3,11 +3,13 @@ import redis from 'redis';
 import AppError from '@shared/errors/AppError';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
 
-const redisClient = redis.createClient({
-  host: process.env.REDIS_HOST,
-  port: Number(process.env.REDIS_PORT),
-  password: process.env.REDIS_PASS || undefined,
-});
+const redisClient = redis.createClient({ url: process.env.REDIS_URL });
+
+// const redisClient = redis.createClient({
+//   host: process.env.REDIS_HOST,
+//   port: Number(process.env.REDIS_PORT),
+//   password: process.env.REDIS_PASS || undefined,
+// });
 
 const rateLimiterRedis = new RateLimiterRedis({
   storeClient: redisClient,
