@@ -11,7 +11,9 @@ module.exports = [
     "cli": {
       "migrationsDir": `./${process.env.PATH_ENTRY}/shared/infra/typeorm/migrations`
     },
-    "extra": process.env.TYPEORM_DRIVER_EXTRA || undefined,
+    "ssl": {
+      "rejectUnauthorized": false
+    },
   },
   {
     "name": "mongo",
