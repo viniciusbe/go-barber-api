@@ -24,7 +24,7 @@ module.exports = [
     "entities": [
       `./${process.env.PATH_ENTRY}/modules/**/infra/typeorm/schemas/*.${process.env.EXTENSION}`
     ],
-    "ssl": true,
+    "ssl": process.env.MONGODB_SSL,
     "authSource": "admin"
   }
 ]
