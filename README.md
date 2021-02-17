@@ -1,71 +1,116 @@
+<p align="center">
+  <a href="https://gobarber.vibesa.online/" rel="noopener">
+ <img src="https://github.com/viniciusbe/GoBarber-web/blob/master/.github/images/logo_github.png" alt="Project logo"></a>
+</p>
 
-Obs: a regra de negócio deve estar atribuída a algum requisito funcional
-# Recuperação de senha
 
-**Requesitos funcionais**
+<p align="center">  RESTful api used by GoBarber <a href="https://github.com/viniciusbe/GoBarber-web">web</a> and <a href="https://github.com/viniciusbe/BootcampGoStack/tree/main/aulas/appgobarber">mobile</a> applications
+</p>
 
- - O usuário deve poder recuperar sua senha informando o seu e-mail;
- - O usuário deve receber um e-mail com instruções de recuperação de senha;
- - O usuário deve poder resetar sua senha;
+[![Badge](https://img.shields.io/badge/PRs-Welcome-%23ff9000)](https://github.com/viniciusbe/GoBarber-web/pulls) [![GitHub license](https://img.shields.io/github/license/viniciusbe/GoBarber-web?color=%23ff9000)](https://github.com/viniciusbe/GoBarber-web/blob/master/LICENSE) [![Badge](https://img.shields.io/badge/made%20by-Vin%C3%ADcius%20Bernardes-%23ff9000)](https://github.com/viniciusbe) ![GitHub repo size](https://img.shields.io/github/repo-size/viniciusbe/GoBarber-api?color=%23ff9000)
+ 
+ 
+### [See the web application here](https://gobarber.vibesa.online/) 
 
-**Requesitos não-funcionais**
+## ![insomnia](https://github.com/viniciusbe/GoBarber-api/blob/master/.github/images/insomnia.svg) Routes
 
- - Utilizar Mailtrap para testar envios em ambiente de dev;
- - Utilizar o Amazon SES para envios em produção;
- - O envio de e-mails deve acontecer em segundo plano (background job);
+<p align="center">
+  <a href="https://github.com/viniciusbe/GoBarber-api/blob/master/.github/images/insomnia.png">
+    <img src="https://github.com/viniciusbe/GoBarber-api/blob/master/.github/images/insomnia.png" title="Login" /></a>
+</p>
 
-**Regras de negócio**
 
- - O link enviado por email para resetar a senha, deve expirar em 2h;
- - O usuário precisar confirmar a nova senha;
+## 📝 Table of Contents
 
-# Atualização de perfil
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Built Using](#built_using)
+- [License](#license)
+- [Authors](#authors)
 
-**RF**
+## 🧐 About <a name = "about"></a>
 
- - O usuário deve pode atualiar seu nome,email e senha;
+This project was created during the [RocketSeat's](https://rocketseat.com.br/) bootcamp GoStack
 
-**RN**
+## 🏁 Getting Started <a name = "getting_started"></a>
 
- - O usuário não pode alterar seu email para um email já utilizado
- - Para atualizar sua senha, o usuário deve informar a senha antiga
- - Para atualizar sua senha, o usuário precisa confirmar a nova senha
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-# Painel do prestador
+### Prerequisites
 
-**RF**
+What things you need to install the application.
 
- - O usuário deve poder listar seus agendamentos de um dia específico;
- - O prestador deve receber uma notificação sempre que houver um novo agendamento;
- - O prestador deve poder visualizar as notificações não lidas;
+```
+Node.js
+Yarn
+PostgreSQL, MongoDB, Redis 
+Docker (Optional - Recommended)
+VS Code (Optional - Recommended)
+```
 
-**RNF**
+### Installing
 
- - Os agendamentos do prestador no dia deve ser armazenado em cache;
- - As notificações do prestador devem ser armazenadas no MongoDB;
- - As notificações do prestador devems ser enviadas em tempo-real utilizando Socket.io;
+A step by step series of examples that tell you how to get a development env running.
 
-**RN**
+Create an instance for each database on docker, following this example for postgres : https://hub.docker.com/_/postgres.
 
- - A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar;
+Cloning the repository:
 
-# Agendamento de serviços
+```
+git clone https://github.com/viniciusbe/GoBarber-web.git
+```
 
-**RF**
+Enter the app folder:
 
- - O usuário deve poder listar todos prestadores de serviços cadastrados;
- - O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
- - O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
- - O usuário deve poder realizar um novo agendamento com um prestador;
+```
+cd GoBarber-web
+```
 
-**RNF**
+Install the dependencies and create your .env (don't forget to create a strong secret to APP_SECRET variable):
+```
+yarn
+cp .env.example .env
+```
 
- - A listagem de prestadores deve ser armazenada em cache;
+Run the migrations and finally run the application:
 
-**RN**
+```
+yarn typeorm migration:run
+yarn dev:server
+```
 
- - Cada agendamento deve durar 1h exatamente;
- - Os agendamentos devem estar disponíveis entre 8h às 18h (Primeiro às 8h, último às 17h);
- - O usuário não pode agendar em um horário já ocupado;
- - O usuário não pode agendar em um horário que já passou;
- - O usuário não pode agendar serviços consigo mesmo;
+The application will run on http://localhost:3333/
+
+> You can test all the routes on [Insomnia](https://insomnia.rest/), just install it and import my [workspace](https://github.com/viniciusbe/GoBarber-api/blob/master/.github/Insomnia_2021-02-17.json) 
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [Express](https://expressjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Redis](https://redis.io/)
+- [Celebrate](https://www.npmjs.com/package/celebrate)
+- [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
+- [Date-fns](https://date-fns.org/)
+- [Handlebars](https://handlebarsjs.com/)
+- [Multer](https://www.npmjs.com/package/multer)
+- [Typeorm](https://typeorm.io/#/)
+
+## ✍️ License <a name = "license"></a>
+
+This project is made available under the [MIT License](https://github.com/viniciusbe/GoBarber-web/blob/master/LICENSE)
+
+
+## Authors <a name = "license"></a> <a name="authors"></a>
+
+<a href="https://github.com/viniciusbe">
+  
+ <img align="left" width="100" height="100" src="https://avatars.githubusercontent.com/u/61849613?s=460&u=246f8dbe8afcc6dec5999d2a6243121bcd4922be&v=4" alt="avatar"/>
+
+</a>
+
+Made with ❤ by [Vinícius Bernardes](https://github.com/viniciusbe)
+
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vinicius-bernardes-santos/)
+[![Gmail Badge](https://img.shields.io/badge/-vinicius@vibesa.online-d14836?style=flat-square&logo=Gmail&logoColor=white)](mailto:vinicius@vibesa.online)
+[![Twitter Badge](https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2FViniciusbern7)](https://twitter.com/Viniciusbern7)
