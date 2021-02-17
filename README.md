@@ -9,8 +9,6 @@
 
 [![Badge](https://img.shields.io/badge/PRs-Welcome-%23ff9000)](https://github.com/viniciusbe/GoBarber-web/pulls) [![GitHub license](https://img.shields.io/github/license/viniciusbe/GoBarber-web?color=%23ff9000)](https://github.com/viniciusbe/GoBarber-web/blob/master/LICENSE) [![Badge](https://img.shields.io/badge/made%20by-Vin%C3%ADcius%20Bernardes-%23ff9000)](https://github.com/viniciusbe) ![GitHub repo size](https://img.shields.io/github/repo-size/viniciusbe/GoBarber-api?color=%23ff9000)
  
- 
-### [See the web application here](https://gobarber.vibesa.online/) 
 
 ## ![insomnia](https://github.com/viniciusbe/GoBarber-api/blob/master/.github/images/insomnia.svg) Routes
 
@@ -57,13 +55,13 @@ Create an instance for each database on docker, following this example for postg
 Cloning the repository:
 
 ```
-git clone https://github.com/viniciusbe/GoBarber-web.git
+git clone https://github.com/viniciusbe/GoBarber-api
 ```
 
 Enter the app folder:
 
 ```
-cd GoBarber-web
+cd GoBarber-api
 ```
 
 Install the dependencies and create your .env (don't forget to create a strong secret to APP_SECRET variable):
