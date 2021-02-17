@@ -7,7 +7,7 @@
 <p align="center">  RESTful api used by GoBarber <a href="https://github.com/viniciusbe/GoBarber-web">web</a> and <a href="https://github.com/viniciusbe/BootcampGoStack/tree/main/aulas/appgobarber">mobile</a> applications
 </p>
 
-[![Badge](https://img.shields.io/badge/PRs-Welcome-%23ff9000)](https://github.com/viniciusbe/GoBarber-web/pulls) [![GitHub license](https://img.shields.io/github/license/viniciusbe/GoBarber-web?color=%23ff9000)](https://github.com/viniciusbe/GoBarber-web/blob/master/LICENSE) [![Badge](https://img.shields.io/badge/made%20by-Vin%C3%ADcius%20Bernardes-%23ff9000)](https://github.com/viniciusbe) ![GitHub repo size](https://img.shields.io/github/repo-size/viniciusbe/GoBarber-api?color=%23ff9000)
+[![Badge](https://img.shields.io/badge/PRs-Welcome-%23ff9000)](https://github.com/viniciusbe/GoBarber-web/pulls) [![GitHub license](https://img.shields.io/github/license/viniciusbe/GoBarber-web?color=%23ff9000)](https://github.com/viniciusbe/GoBarber-web/blob/master/LICENSE) [![Badge](https://img.shields.io/badge/made%20by-Vin%C3%ADcius%20Bernardes-%23ff9000)](https://github.com/viniciusbe) ![GitHub repo size](https://img.shields.io/github/repo-size/viniciusbe/GoBarber-api?color=%23ff9000) ![Badge](https://img.shields.io/badge/repo%20status-Active-green) ![GitHub top language](https://img.shields.io/github/languages/top/viniciusbe/Gobarber-api)
  
 
 ### :crescent_moon: Routes
